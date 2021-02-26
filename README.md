@@ -21,7 +21,7 @@ NOTES:
 
 ```yaml
 #cloud-config
-locale: en_GB.UTF-8
+locale: en_US.UTF-8
 
 runcmd:
   - "curl -s https://raw.githubusercontent.com/mdc-git/hetzner-cloud-init/master/setup.sh | bash -s -- --hcloud-token <TOKEN> --whitelisted-ips <WHITELIST> --floating-ips"
