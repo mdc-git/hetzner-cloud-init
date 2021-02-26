@@ -81,5 +81,9 @@ cat <<EOF >> /etc/crontab
 * * * * * root /usr/local/bin/update-config.sh --hcloud-token ${TOKEN} --whitelisted-ips ${WHITELIST_S} ${FLOATING_IPS}
 EOF
 
+cat <<EOF >> /etc/crontab
+30 * * * * root docker system prune -a -f && docker volume prune -f
+EOF
+
 /usr/local/bin/update-config.sh --hcloud-token ${TOKEN} --whitelisted-ips ${WHITELIST_S} ${FLOATING_IPS}
 
