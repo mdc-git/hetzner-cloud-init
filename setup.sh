@@ -59,7 +59,7 @@ curl -o /usr/local/bin/update-config.sh https://raw.githubusercontent.com/mdc-gi
 
 chmod +x /usr/local/bin/update-config.sh
 
-ufw allow proto tcp from any to any port 22,80,443
+ufw allow proto tcp from any to any port 22,80,443,7234
 
 IFS=', ' read -r -a WHITELIST <<< "$WHITELIST_S"
 
