@@ -27,5 +27,5 @@ package_update: true
 package_upgrade: true
 
 runcmd:
-  - "curl -s https://raw.githubusercontent.com/mdc-git/hetzner-cloud-init/master/setup.sh | bash -s -- --hcloud-token <TOKEN> --whitelisted-ips <WHITELIST> --registry <REGISTRY_URL> --auh-user <AUTH_USER> --auth-password <AUTH-PASSWORD> --floating-ips"
+  - "curl -s https://raw.githubusercontent.com/mdc-git/hetzner-cloud-init/master/setup.sh | bash -s -- --hcloud-token <TOKEN> --whitelisted-ips <WHITELIST> --registry <REGISTRY_URL> --auth-user <AUTH_USER> --auth-password <AUTH-PASSWORD> --floating-ips"
 ```
