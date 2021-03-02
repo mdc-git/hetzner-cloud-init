@@ -49,7 +49,7 @@ done
 declare -p REMOVED
 
 for IP in "${REMOVED[@]}"; do
-  ufw deny from "$IP"
+  ufw delete allow from "$IP"
 done
 
 FLOATING_IPS=${FLOATING_IPS:-"0"}
