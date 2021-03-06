@@ -55,9 +55,11 @@ curl -o /usr/local/bin/rke-node-kubeconfig.sh https://raw.githubusercontent.com/
 
 chmod +x /usr/local/bin/rke-node-kubeconfig.sh
 
-curl -o /usr/local/bin/kubectl https://raw.githubusercontent.com/mdc-git/hetzner-cloud-init/master/kubectl
-
+STABLE=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
+curl -o /usr/local/bin/kubectl "https://storage.googleapis.com/kubernetes-release/release/$STABLE/bin/linux/amd64/kubectl"
 chmod +x /usr/local/bin/kubectl
+
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
 curl -o /usr/local/bin/update-config.sh https://raw.githubusercontent.com/mdc-git/hetzner-cloud-init/master/update-config.sh
 
